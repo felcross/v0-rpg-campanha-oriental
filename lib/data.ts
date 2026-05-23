@@ -1,11 +1,71 @@
 export type Screen = 'home' | 'world-map' | 'nihongan' | 'clans'
 
-export interface MapSlide {
+// ============================================
+// REGIONS DATA - Estrutura para fácil manutenção
+// ============================================
+// Para adicionar mais imagens a uma região, basta adicionar ao array gallery
+// Exemplo: gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg']
+
+export interface Region {
   id: string
-  title: string
-  image: string
+  name: string
+  folderPath: string
+  coverImage: string
+  gallery: string[]
   description: string
+  // Placeholders do Unsplash para visualização antes de substituir pelos assets reais
+  placeholderCover: string
+  placeholderGallery: string[]
 }
+
+export const regionsData: Region[] = [
+  {
+    id: 'norte',
+    name: 'Região Norte (Terras Gélidas)',
+    folderPath: '/assets/imperio/regiao_norte',
+    coverImage: 'mapa_capa.jpg',
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg'],
+    description: 'As terras do norte são dominadas por montanhas nevadas e florestas ancestrais. Aqui residem os clãs mais resilientes, forjados pelo frio implacável e pela constante vigilância contra as criaturas das terras além da Muralha de Gelo. Os invernos são longos e impiedosos, mas a beleza das auroras boreais e dos templos cobertos de neve compensam qualquer sacrifício.',
+    placeholderCover: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
+    placeholderGallery: [
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
+      'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80'
+    ]
+  },
+  {
+    id: 'central',
+    name: 'Região Central (Planícies Imperiais)',
+    folderPath: '/assets/imperio/regiao_central',
+    coverImage: 'mapa_capa.jpg',
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg'],
+    description: 'O coração pulsante do império, onde se ergue a majestosa Capital Imperial e os principais centros de poder político e espiritual. As planícies férteis alimentam todo o reino, e os rios sagrados conectam as províncias como veias de um corpo vivo. Aqui, a corte imperial tece intrigas tão complexas quanto os jardins de cerejeiras que adornam seus palácios.',
+    placeholderCover: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80',
+    placeholderGallery: [
+      'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80',
+      'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80',
+      'https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=800&q=80'
+    ]
+  },
+  {
+    id: 'sul',
+    name: 'Região Sul (Costa das Mil Ilhas)',
+    folderPath: '/assets/imperio/regiao_sul',
+    coverImage: 'mapa_capa.jpg',
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg'],
+    description: 'O arquipélago do sul é um mundo à parte, onde mil ilhas pontilham mares esmeraldinos. Rica em comércio e tradições marítimas, esta região é lar de pescadores intrépidos, mercadores astutos e piratas que desafiam a autoridade imperial. Os templos flutuantes e as aldeias sobre palafitas guardam segredos antigos dos povos do mar.',
+    placeholderCover: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&q=80',
+    placeholderGallery: [
+      'https://images.unsplash.com/photo-1505881502353-a1986add3762?w=800&q=80',
+      'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80',
+      'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&q=80'
+    ]
+  }
+]
+
+// ============================================
+// CLANS DATA - Estrutura para fácil manutenção
+// ============================================
 
 export interface Clan {
   id: string
@@ -16,33 +76,6 @@ export interface Clan {
   lore: string
   pdfUrl: string
 }
-
-export const mapsData: MapSlide[] = [
-  {
-    id: 'nihongan-full',
-    title: 'Mapa Completo de Nihongan',
-    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1920&q=80',
-    description: 'O império completo de Nihongan, com todas as suas províncias e territórios.'
-  },
-  {
-    id: 'nihongan-north',
-    title: 'Região Norte - Terras Geladas',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80',
-    description: 'As terras do norte, dominadas por montanhas nevadas e florestas ancestrais.'
-  },
-  {
-    id: 'nihongan-central',
-    title: 'Região Central - Planícies Imperiais',
-    image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1920&q=80',
-    description: 'O coração do império, onde se encontra a capital e os principais centros de poder.'
-  },
-  {
-    id: 'nihongan-south',
-    title: 'Região Sul - Costa das Mil Ilhas',
-    image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=1920&q=80',
-    description: 'O arquipélago do sul, rico em comércio e tradições marítimas.'
-  }
-]
 
 export const clansData: Clan[] = [
   {
@@ -100,3 +133,43 @@ export const clansData: Clan[] = [
     pdfUrl: '/assets/pdfs/grou.pdf'
   }
 ]
+
+// ============================================
+// WORLD MAP DATA
+// ============================================
+
+export const worldMapData = {
+  // Caminho local para o mapa mundi (após substituir pelo asset real)
+  localPath: '/assets/mapamundi/mapamundi.jpg',
+  // Placeholder do Unsplash enquanto o asset real não é adicionado
+  placeholder: 'https://images.unsplash.com/photo-1476304884326-cd2c88572c5f?w=1920&q=80',
+  title: 'Mapa Mundi',
+  description: 'O vasto mundo conhecido se estende muito além das fronteiras de Nihongan. Explore continentes distantes, mares inexplorados e terras misteriosas.'
+}
+
+// ============================================
+// HELPER: Função para obter URL de imagem (local ou placeholder)
+// ============================================
+// Quando os assets reais forem adicionados, mude USE_LOCAL_ASSETS para true
+
+export const USE_LOCAL_ASSETS = false
+
+export function getImageUrl(localPath: string, placeholder: string): string {
+  return USE_LOCAL_ASSETS ? localPath : placeholder
+}
+
+export function getRegionCoverUrl(region: Region): string {
+  const localPath = `${region.folderPath}/${region.coverImage}`
+  return getImageUrl(localPath, region.placeholderCover)
+}
+
+export function getRegionGalleryUrls(region: Region): string[] {
+  if (USE_LOCAL_ASSETS) {
+    return region.gallery.map(img => `${region.folderPath}/${img}`)
+  }
+  return region.placeholderGallery
+}
+
+export function getWorldMapUrl(): string {
+  return getImageUrl(worldMapData.localPath, worldMapData.placeholder)
+}
