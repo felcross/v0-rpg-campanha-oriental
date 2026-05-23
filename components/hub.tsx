@@ -1,6 +1,6 @@
 'use client'
 
-import { Map, Castle, Users } from 'lucide-react'
+import { Map, Castle, Users, Download } from 'lucide-react'
 import type { Screen } from '@/lib/data'
 
 interface HubProps {
@@ -68,6 +68,18 @@ export function Hub({ onNavigate }: HubProps) {
           <p className="mx-auto max-w-2xl text-pretty text-center text-lg leading-relaxed text-muted-foreground md:text-xl">
             Cenário L5R Expandido se dedica a apresentar o mundo completo de fantasia para se aventurar com amigos.
           </p>
+
+          {/* Download Button */}
+          <div className="mt-8 flex justify-center">
+            <a
+              href="/assets/pdfs/sistema.pdf"
+              download
+              className="group inline-flex items-center gap-3 rounded-lg border border-primary/30 bg-primary/10 px-6 py-3 font-medium text-primary transition-all duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/20"
+            >
+              <Download className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5" />
+              <span>Baixar PDF do Sistema</span>
+            </a>
+          </div>
         </div>
       </section>
 
