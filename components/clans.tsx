@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight, Download } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Download, FileText } from 'lucide-react'
 import { NavigationHeader } from '@/components/navigation-header'
 import { Button } from '@/components/ui/button'
 import { clansData } from '@/lib/data'
@@ -26,12 +26,6 @@ export function Clans({ onBack }: ClansProps) {
   }
 
   const clan = clansData[currentClan]
-
-  const handleDownload = () => {
-    // In a real app, this would download the actual PDF
-    // For now, we'll show an alert
-    alert(`Download iniciado: ${clan.name} - Escola de Clã\n\nNota: Substitua os arquivos em /public/assets/pdfs/ pelos PDFs reais.`)
-  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -120,22 +114,42 @@ export function Clans({ onBack }: ClansProps) {
               {/* Download Section */}
               <div className="rounded-lg border border-border/50 bg-muted/30 p-6">
                 <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-                  <div>
-                    <h4 className="font-serif font-bold text-foreground">
-                      Material do Clã
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Faça download das escolas e técnicas do {clan.name}
-                    </p>
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                      <FileText className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-serif font-bold text-foreground">
+                        Material do Clã
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Escolas e técnicas do {clan.name}
+                      </p>
+                      <p className="mt-1 text-xs text-muted-foreground/70">
+                        Arquivo: {clan.pdfUrl.split('/').pop()}
+                      </p>
+                    </div>
                   </div>
                   <Button
-                    onClick={handleDownload}
+                    asChild
                     className="gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
                   >
-                    <Download className="h-4 w-4" />
-                    Baixar Escola de Clã
+                    <a href={clan.pdfUrl} download>
+                      <Download className="h-4 w-4" />
+                      Baixar PDF
+                    </a>
                   </Button>
                 </div>
+              </div>
+
+              {/* Nota sobre assets */}
+              <div className="mt-4 rounded-lg border border-dashed border-border bg-muted/20 p-3 text-center">
+                <p className="text-xs text-muted-foreground">
+                  Adicione o PDF em{' '}
+                  <code className="rounded bg-muted px-1 py-0.5 font-mono text-foreground">
+                    /public{clan.pdfUrl}
+                  </code>
+                </p>
               </div>
             </div>
           </div>
