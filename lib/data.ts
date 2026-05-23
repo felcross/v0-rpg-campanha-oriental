@@ -188,7 +188,7 @@ export const worldMapData = {
 // ============================================
 // Quando os assets reais forem adicionados, mude USE_LOCAL_ASSETS para true
 
-export const USE_LOCAL_ASSETS = false
+export const USE_LOCAL_ASSETS = true
 
 export function getImageUrl(localPath: string, placeholder: string): string {
   return USE_LOCAL_ASSETS ? localPath : placeholder
