@@ -64,7 +64,7 @@ export const regionsData: Region[] = [
 ]
 
 // ============================================
-// CLANS DATA - Estrutura para fácil manutenção
+// CLANS DATA - 10 Clãs Customizados da Campanha
 // ============================================
 
 export interface Clan {
@@ -79,15 +79,6 @@ export interface Clan {
 
 export const clansData: Clan[] = [
   {
-    id: 'fenix',
-    name: 'Clã Fênix',
-    emblem: '🔥',
-    color: 'from-orange-600 to-red-700',
-    description: 'Guardiões do conhecimento místico e das tradições espirituais do império.',
-    lore: 'O Clã Fênix é conhecido por sua profunda conexão com os elementos e os espíritos ancestrais. Seus shugenja são os mais poderosos do império, capazes de invocar as forças da natureza e comungar com os kami. A biblioteca do clã, localizada nas Montanhas Isawa, contém pergaminhos tão antigos quanto o próprio império, alguns escritos pelos fundadores divinos. Os samurais Fênix são estudiosos por natureza, preferindo resolver conflitos através da sabedoria e da diplomacia, embora seus poderes místicos os tornem adversários formidáveis quando provocados.',
-    pdfUrl: '/assets/pdfs/fenix.pdf'
-  },
-  {
     id: 'dragao',
     name: 'Clã Dragão',
     emblem: '🐉',
@@ -97,22 +88,67 @@ export const clansData: Clan[] = [
     pdfUrl: '/assets/pdfs/dragao.pdf'
   },
   {
-    id: 'leao',
-    name: 'Clã Leão',
-    emblem: '🦁',
-    color: 'from-amber-500 to-yellow-600',
-    description: 'Os maiores guerreiros do império, defensores da honra e da tradição militar.',
-    lore: 'O Clã Leão é a espinha dorsal militar do império. Seus exércitos são lendários, treinados desde a infância na arte da guerra e no código do bushido. A Akodo War College forma os melhores tacticians conhecidos, cujos manuais de estratégia são estudados em todos os cantos do mundo. Os samurais Leão vivem pela espada e morrem com honra, considerando a covardia o pior dos pecados. Sua lealdade ao Imperador é inabalável, e muitas guerras foram vencidas pelo simples rugido de seus exércitos marchando.',
-    pdfUrl: '/assets/pdfs/leao.pdf'
+    id: 'urso',
+    name: 'Clã Urso',
+    emblem: '🐻',
+    color: 'from-amber-700 to-yellow-800',
+    description: 'Guerreiros ferozes das florestas do norte, conhecidos por sua força bruta e lealdade.',
+    lore: 'O Clã Urso habita as densas florestas do norte, onde o inverno nunca cede completamente. Seus guerreiros são conhecidos pela força descomunal e pela resistência sobre-humana, forjadas em décadas de caça aos predadores mais perigosos da região. A sociedade do clã valoriza a honestidade brutal e despreza a falsidade cortesã. Seus berserkers entram em transes de batalha lendários, canalizando o espírito do grande urso ancestral que, segundo a lenda, fundou o clã ao adotar um órfão humano perdido nas nevascas.',
+    pdfUrl: '/assets/pdfs/urso.pdf'
   },
   {
-    id: 'caranguejo',
-    name: 'Clã Caranguejo',
-    emblem: '🦀',
-    color: 'from-slate-600 to-gray-700',
-    description: 'Guardiões da Muralha que protege o império das trevas do além.',
-    lore: 'Na fronteira sul do império ergue-se a Grande Muralha Kaiu, e atrás dela, o Clã Caranguejo mantém vigília eterna contra as hordas das Terras Sombrias. Esses guerreiros são os mais resistentes do império, endurecidos por gerações de combate contra demônios e mortos-vivos. Eles desprezam a etiqueta cortesã, preferindo ações a palavras, e são frequentemente vistos como rudes pelos outros clãs. Mas quando as trevas avançam, são os Caranguejo que sangram primeiro para proteger todos os outros.',
-    pdfUrl: '/assets/pdfs/caranguejo.pdf'
+    id: 'lobo',
+    name: 'Clã Lobo',
+    emblem: '🐺',
+    color: 'from-slate-600 to-zinc-700',
+    description: 'Caçadores nômades das estepes, mestres da estratégia de alcateia.',
+    lore: 'O Clã Lobo nunca construiu castelos ou cidades permanentes. Suas tendas percorrem as vastas estepes do império, seguindo as migrações dos rebanhos e as estações. Seus guerreiros lutam em formações coordenadas que imitam as táticas de caça das alcateias, comunicando-se através de uivos e sinais que confundem os inimigos. O clã é governado por um conselho de alfas, e a liderança é conquistada através de provas de astúcia e resistência, não de nascimento. Dizem que um Lobo sozinho é perigoso, mas uma alcateia é imparável.',
+    pdfUrl: '/assets/pdfs/lobo.pdf'
+  },
+  {
+    id: 'fenix',
+    name: 'Clã Fênix',
+    emblem: '🔥',
+    color: 'from-orange-600 to-red-700',
+    description: 'Guardiões do conhecimento místico e das tradições espirituais do império.',
+    lore: 'O Clã Fênix é conhecido por sua profunda conexão com os elementos e os espíritos ancestrais. Seus shugenja são os mais poderosos do império, capazes de invocar as forças da natureza e comungar com os kami. A biblioteca do clã, localizada nas Montanhas Isawa, contém pergaminhos tão antigos quanto o próprio império, alguns escritos pelos fundadores divinos. Os samurais Fênix são estudiosos por natureza, preferindo resolver conflitos através da sabedoria e da diplomacia, embora seus poderes místicos os tornem adversários formidáveis quando provocados.',
+    pdfUrl: '/assets/pdfs/fenix.pdf'
+  },
+  {
+    id: 'coruja',
+    name: 'Clã Coruja',
+    emblem: '🦉',
+    color: 'from-indigo-600 to-violet-700',
+    description: 'Sábios guardiões do conhecimento oculto e dos segredos ancestrais.',
+    lore: 'O Clã Coruja opera nas sombras do conhecimento, guardando segredos que outros clãs prefeririam esquecer. Suas bibliotecas subterrâneas contêm tomos proibidos e pergaminhos selados por magia antiga. Os membros do clã são reconhecidos por seus olhos penetrantes que parecem enxergar além do véu da realidade. Seus espiões e informantes formam uma rede que alcança todos os cantos do império, e dizem que nenhum segredo escapa aos ouvidos da Coruja. Em tempos de crise, são consultores indispensáveis, pois seu conhecimento frequentemente salva impérios.',
+    pdfUrl: '/assets/pdfs/coruja.pdf'
+  },
+  {
+    id: 'serpente',
+    name: 'Clã Serpente',
+    emblem: '🐍',
+    color: 'from-lime-600 to-green-700',
+    description: 'Mestres do veneno e da medicina, equilibrando cura e destruição.',
+    lore: 'O Clã Serpente domina os pântanos e selvas do império, onde a linha entre remédio e veneno é tênue como uma gota de orvalho. Seus curandeiros são os mais requisitados do reino, capazes de curar pragas que devastariam províncias inteiras. Porém, suas habilidades com toxinas são igualmente lendárias. Cada membro carrega antídotos para centenas de venenos, e seus assassinos são fantasmas que não deixam rastros. O clã mantém o equilíbrio sagrado entre vida e morte, servindo como árbitros quando outros métodos falham.',
+    pdfUrl: '/assets/pdfs/serpente.pdf'
+  },
+  {
+    id: 'javali',
+    name: 'Clã Javali',
+    emblem: '🐗',
+    color: 'from-stone-600 to-neutral-700',
+    description: 'Defensores obstinados conhecidos por sua resistência inabalável.',
+    lore: 'O Clã Javali é sinônimo de teimosia e resistência. Suas fortalezas nunca caíram em cerco, e seus guerreiros são conhecidos por lutar até o último suspiro. A sociedade do clã valoriza a perseverança acima de tudo, e seus membros são treinados desde a infância a suportar dor, fome e fadiga sem reclamar. Suas formações defensivas são muralhas vivas de aço e determinação. Dizem que convencer um Javali a recuar é mais difícil do que mover uma montanha, e que sua lealdade, uma vez conquistada, é eterna.',
+    pdfUrl: '/assets/pdfs/javali.pdf'
+  },
+  {
+    id: 'vagalume',
+    name: 'Clã Vagalume',
+    emblem: '✨',
+    color: 'from-yellow-400 to-amber-500',
+    description: 'Artistas e mensageiros que iluminam as trevas com esperança.',
+    lore: 'O Clã Vagalume é o menor e mais peculiar dos grandes clãs. Seus membros são artistas itinerantes, mensageiros e diplomatas que viajam livremente entre todas as facções. Protegidos por tratados antigos, os Vagalumes são considerados neutros em todos os conflitos, e atacar um deles é tabu universal. Suas performances nas cortes são lendárias, e suas mensagens atravessam linhas de batalha sem serem interceptadas. Em tempos de escuridão, são os Vagalumes que mantêm a esperança viva, lembrando a todos que mesmo a menor luz pode guiar através das trevas.',
+    pdfUrl: '/assets/pdfs/vagalume.pdf'
   },
   {
     id: 'escorpiao',
@@ -124,13 +160,13 @@ export const clansData: Clan[] = [
     pdfUrl: '/assets/pdfs/escorpiao.pdf'
   },
   {
-    id: 'grou',
-    name: 'Clã Grou',
-    emblem: '🦢',
-    color: 'from-sky-500 to-cyan-600',
-    description: 'Artistas, cortesãos e diplomatas que tecem a paz entre os clãs.',
-    lore: 'O Clã Grou é a alma artística do império. Seus membros são poetas, pintores, músicos e os mais habilidosos cortesãos. Na corte imperial, um único verso bem colocado de um Grou pode mudar o destino de nações. Eles acreditam que a beleza é a maior expressão da alma, e que a arte pode transcender conflitos. As gueixas do clã são as mais requisitadas, não apenas por sua beleza, mas por sua astúcia política. Subestimar um Grou é um erro que muitos guerreiros arrogantes cometeram apenas uma vez.',
-    pdfUrl: '/assets/pdfs/grou.pdf'
+    id: 'tigre',
+    name: 'Clã Tigre',
+    emblem: '🐅',
+    color: 'from-orange-500 to-amber-600',
+    description: 'Guerreiros ferozes das selvas, conhecidos por sua agilidade mortal.',
+    lore: 'O Clã Tigre domina as selvas tropicais do sul, onde cada sombra pode esconder um predador. Seus guerreiros são conhecidos pela velocidade felina e pelos reflexos sobre-humanos, treinados desde a infância a caçar nas copas das árvores e a emboscar presas maiores que eles. O clã valoriza a independência individual acima da conformidade, e cada Tigre é encorajado a desenvolver seu próprio estilo de combate único. Suas listras de guerra são pintadas com pigmentos sagrados que, dizem, concedem a benção do grande Tigre ancestral.',
+    pdfUrl: '/assets/pdfs/tigre.pdf'
   }
 ]
 
@@ -140,7 +176,7 @@ export const clansData: Clan[] = [
 
 export const worldMapData = {
   // Caminho local para o mapa mundi (após substituir pelo asset real)
-  localPath: '/assets/mapamundi/mapamundi.jpg',
+  localPath: '/assets/mapas/mapamundi.jpg',
   // Placeholder do Unsplash enquanto o asset real não é adicionado
   placeholder: 'https://images.unsplash.com/photo-1476304884326-cd2c88572c5f?w=1920&q=80',
   title: 'Mapa Mundi',
