@@ -1,35 +1,18 @@
 'use client'
 
-import { Map, Castle, Users, Download } from 'lucide-react'
-import type { Screen } from '@/lib/data'
+import { Map, Castle, Users, Sparkles, Download } from 'lucide-react'
+import { hubCardsData, getHubCardImageUrl, type Screen } from '@/lib/data'
 
 interface HubProps {
   onNavigate: (screen: Screen) => void
 }
 
-const navigationCards = [
-  {
-    id: 'world-map' as Screen,
-    title: 'Mapa Mundi',
-    description: 'Explore o vasto mundo além das fronteiras do império',
-    icon: Map,
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80',
-  },
-  {
-    id: 'nihongan' as Screen,
-    title: 'Império de Nihongan',
-    description: 'Descubra a geografia e as regiões do glorioso império',
-    icon: Castle,
-    image: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80',
-  },
-  {
-    id: 'clans' as Screen,
-    title: 'Clãs do Império',
-    description: 'Conheça os grandes clãs e suas tradições ancestrais',
-    icon: Users,
-    image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80',
-  },
-]
+const iconMap = {
+  'world-map': Map,
+  'nihongan': Castle,
+  'clans': Users,
+  'magic': Sparkles,
+}
 
 export function Hub({ onNavigate }: HubProps) {
   return (
@@ -85,48 +68,55 @@ export function Hub({ onNavigate }: HubProps) {
 
       {/* Navigation Cards */}
       <section className="mx-auto max-w-7xl px-4 pb-16">
-        <div className="grid gap-6 md:grid-cols-3">
-          {navigationCards.map((card) => (
-            <button
-              key={card.id}
-              onClick={() => onNavigate(card.id)}
-              className="group relative overflow-hidden rounded-lg border border-border/50 bg-card shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10"
-            >
-              {/* Card Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                
-                {/* Icon */}
-                <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full border border-primary/30 bg-card/90 shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-                  <card.icon className="h-6 w-6 text-primary" />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {hubCardsData.map((card) => {
+            const Icon = iconMap[card.id as keyof typeof iconMap]
+            const imageUrl = getHubCardImageUrl(card)
+            
+            return (
+              <button
+                key={card.id}
+                onClick={() => onNavigate(card.id)}
+                className="group relative overflow-hidden rounded-lg border border-border/50 bg-card shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10"
+              >
+                {/* Card Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={imageUrl}
+                    alt={card.title}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+                  
+                  {/* Icon */}
+                  {Icon && (
+                    <div className="absolute bottom-4 left-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-card/90 shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                      <Icon className="h-5 w-5 text-primary" />
+                    </div>
+                  )}
                 </div>
-              </div>
 
-              {/* Card Content */}
-              <div className="p-6 text-left">
-                <h3 className="mb-2 font-serif text-xl font-bold text-foreground transition-colors group-hover:text-primary">
-                  {card.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {card.description}
-                </p>
-                
-                {/* Hover Indicator */}
-                <div className="mt-4 flex items-center gap-2 text-sm font-medium text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <span>Explorar</span>
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                {/* Card Content */}
+                <div className="p-4 text-left">
+                  <h3 className="mb-1 font-serif text-lg font-bold text-foreground transition-colors group-hover:text-primary">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {card.description}
+                  </p>
+                  
+                  {/* Hover Indicator */}
+                  <div className="mt-3 flex items-center gap-2 text-sm font-medium text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <span>Explorar</span>
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </div>
                 </div>
-              </div>
 
-              {/* Decorative Border Animation */}
-              <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            </button>
-          ))}
+                {/* Decorative Border Animation */}
+                <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </button>
+            )
+          })}
         </div>
       </section>
 

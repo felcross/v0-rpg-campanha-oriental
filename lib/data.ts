@@ -1,10 +1,50 @@
-export type Screen = 'home' | 'world-map' | 'nihongan' | 'clans'
+export type Screen = 'home' | 'world-map' | 'nihongan' | 'clans' | 'magic'
 
 // ============================================
-// REGIONS DATA - Estrutura para fácil manutenção
+// WORLD MAPS DATA - Seção Mapas do Mundo (2 Tabs)
 // ============================================
-// Para adicionar mais imagens a uma região, basta adicionar ao array gallery
-// Exemplo: gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg']
+
+export interface WorldMapTab {
+  id: string
+  name: string
+  folderPath: string
+  coverImage: string
+  gallery: string[]
+  description: string
+  placeholderCover: string
+  placeholderGallery: string[]
+}
+
+export const worldMapsData: WorldMapTab[] = [
+  {
+    id: 'mundi',
+    name: 'Mapa Mundi',
+    folderPath: '/assets/mapas/mundi',
+    coverImage: 'mapa_capa.jpg',
+    gallery: ['mapa_1.jpg'],
+    description: 'O vasto mundo conhecido se estende muito além das fronteiras de Nihongan. Explore continentes distantes, mares inexplorados e terras misteriosas onde civilizações antigas guardam segredos inimagináveis.',
+    placeholderCover: 'https://images.unsplash.com/photo-1476304884326-cd2c88572c5f?w=1200&q=80',
+    placeholderGallery: [
+      'https://images.unsplash.com/photo-1524055988636-436cfa46e59e?w=800&q=80'
+    ]
+  },
+  {
+    id: 'geral_nihongan',
+    name: 'Mapa Geral de Nihongan',
+    folderPath: '/assets/mapas/geral_nihongan',
+    coverImage: 'mapa_capa.jpg',
+    gallery: ['mapa_1.jpg'],
+    description: 'O glorioso Império de Nihongan em toda sua extensão. Das montanhas geladas do norte às ilhas tropicais do sul, este mapa revela as províncias, rotas comerciais e pontos estratégicos do maior império do mundo conhecido.',
+    placeholderCover: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80',
+    placeholderGallery: [
+      'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80'
+    ]
+  }
+]
+
+// ============================================
+// REGIONS DATA - Seção Império de Nihongan (3 Regiões)
+// ============================================
 
 export interface Region {
   id: string
@@ -13,7 +53,6 @@ export interface Region {
   coverImage: string
   gallery: string[]
   description: string
-  // Placeholders do Unsplash para visualização antes de substituir pelos assets reais
   placeholderCover: string
   placeholderGallery: string[]
 }
@@ -24,13 +63,12 @@ export const regionsData: Region[] = [
     name: 'Região Norte (Terras Gélidas)',
     folderPath: '/assets/imperio/regiao_norte',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_5.jpg','mapa_6.jpg', 'mapa_7.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg'],
     description: 'As terras do norte são dominadas por montanhas nevadas e florestas ancestrais. Aqui residem os clãs mais resilientes, forjados pelo frio implacável e pela constante vigilância contra as criaturas das terras além da Muralha de Gelo. Os invernos são longos e impiedosos, mas a beleza das auroras boreais e dos templos cobertos de neve compensam qualquer sacrifício.',
     placeholderCover: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     placeholderGallery: [
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
-      'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80'
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80'
     ]
   },
   {
@@ -38,13 +76,12 @@ export const regionsData: Region[] = [
     name: 'Região Central (Planícies Imperiais)',
     folderPath: '/assets/imperio/regiao_central',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_5.jpg','mapa_6.jpg', 'mapa_7.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg'],
     description: 'O coração pulsante do império, onde se ergue a majestosa Capital Imperial e os principais centros de poder político e espiritual. As planícies férteis alimentam todo o reino, e os rios sagrados conectam as províncias como veias de um corpo vivo. Aqui, a corte imperial tece intrigas tão complexas quanto os jardins de cerejeiras que adornam seus palácios.',
     placeholderCover: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80',
     placeholderGallery: [
       'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80',
-      'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80',
-      'https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=800&q=80'
+      'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80'
     ]
   },
   {
@@ -52,19 +89,18 @@ export const regionsData: Region[] = [
     name: 'Região Sul (Costa das Mil Ilhas)',
     folderPath: '/assets/imperio/regiao_sul',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_5.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg'],
     description: 'O arquipélago do sul é um mundo à parte, onde mil ilhas pontilham mares esmeraldinos. Rica em comércio e tradições marítimas, esta região é lar de pescadores intrépidos, mercadores astutos e piratas que desafiam a autoridade imperial. Os templos flutuantes e as aldeias sobre palafitas guardam segredos antigos dos povos do mar.',
     placeholderCover: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&q=80',
     placeholderGallery: [
       'https://images.unsplash.com/photo-1505881502353-a1986add3762?w=800&q=80',
-      'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80',
-      'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&q=80'
+      'https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=800&q=80'
     ]
   }
 ]
 
 // ============================================
-// CLANS DATA - 10 Clãs Customizados da Campanha
+// CLANS DATA - 10 Clãs Customizados
 // ============================================
 
 export interface Clan {
@@ -171,22 +207,84 @@ export const clansData: Clan[] = [
 ]
 
 // ============================================
-// WORLD MAP DATA
+// MAGIC DATA - Seção Feitiços Elementais & Fortunas
 // ============================================
 
-export const worldMapData = {
-  // Caminho local para o mapa mundi (após substituir pelo asset real)
-  localPath: '/assets/mapas/mapamundi.jpg',
-  // Placeholder do Unsplash enquanto o asset real não é adicionado
-  placeholder: 'https://images.unsplash.com/photo-1476304884326-cd2c88572c5f?w=1920&q=80',
-  title: 'Mapa Mundi',
-  description: 'O vasto mundo conhecido se estende muito além das fronteiras de Nihongan. Explore continentes distantes, mares inexplorados e terras misteriosas.'
+export interface MagicProfile {
+  id: string
+  name: string
+  title: string
+  emblem: string
+  color: string
+  description: string
+  lore: string
+  pdfUrl: string
+  buttonText: string
 }
 
+export const magicData: MagicProfile[] = [
+  {
+    id: 'shugenja',
+    name: 'Shugenja',
+    title: 'Caminho do Shugenja (Sacerdotes Elementais)',
+    emblem: '🔥',
+    color: 'from-red-600 to-orange-700',
+    description: 'Mestres das orações elementais que canalizam o poder dos kami.',
+    lore: 'Os Shugenja são sacerdotes que dedicaram suas vidas ao estudo e comunhão com os kami, os espíritos elementais que permeiam toda a criação. Através de orações ancestrais e rituais sagrados, eles canalizam o poder dos elementos: Fogo para destruição e purificação, Água para cura e adaptação, Terra para proteção e resistência, Ar para velocidade e percepção, e o misterioso Vazio que conecta todas as coisas. Cada Shugenja possui afinidade natural com um elemento, mas os mais poderosos conseguem harmonizar todos os cinco em perfeito equilíbrio. Seus pergaminhos de orações são tesouros transmitidos por gerações, e os rituais mais poderosos requerem dias de preparação e meditação profunda.',
+    pdfUrl: '/assets/pdfs/shugenja.pdf',
+    buttonText: 'Baixar Pergaminhos de Shugenja'
+  },
+  {
+    id: 'onmyoji',
+    name: 'Onmyoji',
+    title: 'Práticas Onmyōdō (Mestres do Yin-Yang e Astrologia)',
+    emblem: '☯️',
+    color: 'from-purple-600 to-indigo-700',
+    description: 'Mestres da adivinhação, astrologia e equilíbrio cósmico.',
+    lore: 'Os Onmyoji praticam a arte ancestral do Onmyōdō, o Caminho do Yin e Yang. Diferente dos Shugenja que invocam os kami, os Onmyoji manipulam as forças fundamentais do cosmos: luz e escuridão, criação e destruição, ordem e caos. Seus poderes incluem a adivinhação através das estrelas e do I Ching, a criação de talismãs protetores (ofuda), a exorcização de espíritos malignos, e a manipulação sutil do destino. Os Onmyoji mais poderosos conseguem prever catástrofes anos antes de ocorrerem, criar barreiras que protegem cidades inteiras, e até mesmo negociar com os próprios demônios. Seus conhecimentos são registrados em tratados complexos que levam décadas para dominar.',
+    pdfUrl: '/assets/pdfs/onmyoji.pdf',
+    buttonText: 'Baixar Tratado Onmyoji'
+  }
+]
+
 // ============================================
-// HELPER: Função para obter URL de imagem (local ou placeholder)
+// HUB CARDS DATA - 4 Cards de Navegação
 // ============================================
-// Quando os assets reais forem adicionados, mude USE_LOCAL_ASSETS para true
+
+export const hubCardsData = [
+  {
+    id: 'world-map' as Screen,
+    title: 'Mapas do Mundo',
+    description: 'Explore mapas detalhados do mundo e do império',
+    coverPath: '/assets/capas/capa_mapas.jpg',
+    placeholder: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80'
+  },
+  {
+    id: 'nihongan' as Screen,
+    title: 'Geografia do Império',
+    description: 'Descubra as regiões e territórios de Nihongan',
+    coverPath: '/assets/capas/capa_imperio.jpg',
+    placeholder: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80'
+  },
+  {
+    id: 'clans' as Screen,
+    title: 'Clãs de Nihongan',
+    description: 'Conheça os grandes clãs e suas tradições ancestrais',
+    coverPath: '/assets/capas/capa_clans.jpg',
+    placeholder: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80'
+  },
+  {
+    id: 'magic' as Screen,
+    title: 'Feitiços Elementais & Fortunas',
+    description: 'Domine as artes místicas dos Shugenja e Onmyoji',
+    coverPath: '/assets/capas/capa_magia.jpg',
+    placeholder: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80'
+  }
+]
+
+// ============================================
+// HELPER FUNCTIONS
+// ============================================
 
 export const USE_LOCAL_ASSETS = true
 
@@ -206,6 +304,18 @@ export function getRegionGalleryUrls(region: Region): string[] {
   return region.placeholderGallery
 }
 
-export function getWorldMapUrl(): string {
-  return getImageUrl(worldMapData.localPath, worldMapData.placeholder)
+export function getWorldMapCoverUrl(mapTab: WorldMapTab): string {
+  const localPath = `${mapTab.folderPath}/${mapTab.coverImage}`
+  return getImageUrl(localPath, mapTab.placeholderCover)
+}
+
+export function getWorldMapGalleryUrls(mapTab: WorldMapTab): string[] {
+  if (USE_LOCAL_ASSETS) {
+    return mapTab.gallery.map(img => `${mapTab.folderPath}/${img}`)
+  }
+  return mapTab.placeholderGallery
+}
+
+export function getHubCardImageUrl(card: typeof hubCardsData[0]): string {
+  return getImageUrl(card.coverPath, card.placeholder)
 }

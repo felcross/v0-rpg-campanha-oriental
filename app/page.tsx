@@ -5,6 +5,7 @@ import { Hub } from '@/components/hub'
 import { WorldMap } from '@/components/world-map'
 import { Nihongan } from '@/components/nihongan'
 import { Clans } from '@/components/clans'
+import { Magic } from '@/components/magic'
 import type { Screen } from '@/lib/data'
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       {currentScreen === 'world-map' && <WorldMap onBack={() => navigateTo('home')} />}
       {currentScreen === 'nihongan' && <Nihongan onBack={() => navigateTo('home')} />}
       {currentScreen === 'clans' && <Clans onBack={() => navigateTo('home')} />}
+      {currentScreen === 'magic' && <Magic onBack={() => navigateTo('home')} />}
     </main>
   )
 }
