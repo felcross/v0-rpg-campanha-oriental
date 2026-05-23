@@ -24,7 +24,7 @@ export const regionsData: Region[] = [
     name: 'Região Norte (Terras Gélidas)',
     folderPath: '/assets/imperio/regiao_norte',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_5.jpg','mapa_6.jpg', 'mapa_7.jpg'],
     description: 'As terras do norte são dominadas por montanhas nevadas e florestas ancestrais. Aqui residem os clãs mais resilientes, forjados pelo frio implacável e pela constante vigilância contra as criaturas das terras além da Muralha de Gelo. Os invernos são longos e impiedosos, mas a beleza das auroras boreais e dos templos cobertos de neve compensam qualquer sacrifício.',
     placeholderCover: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     placeholderGallery: [
@@ -38,7 +38,7 @@ export const regionsData: Region[] = [
     name: 'Região Central (Planícies Imperiais)',
     folderPath: '/assets/imperio/regiao_central',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_5.jpg','mapa_6.jpg', 'mapa_7.jpg'],
     description: 'O coração pulsante do império, onde se ergue a majestosa Capital Imperial e os principais centros de poder político e espiritual. As planícies férteis alimentam todo o reino, e os rios sagrados conectam as províncias como veias de um corpo vivo. Aqui, a corte imperial tece intrigas tão complexas quanto os jardins de cerejeiras que adornam seus palácios.',
     placeholderCover: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=80',
     placeholderGallery: [
@@ -52,7 +52,7 @@ export const regionsData: Region[] = [
     name: 'Região Sul (Costa das Mil Ilhas)',
     folderPath: '/assets/imperio/regiao_sul',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_5.jpg'],
     description: 'O arquipélago do sul é um mundo à parte, onde mil ilhas pontilham mares esmeraldinos. Rica em comércio e tradições marítimas, esta região é lar de pescadores intrépidos, mercadores astutos e piratas que desafiam a autoridade imperial. Os templos flutuantes e as aldeias sobre palafitas guardam segredos antigos dos povos do mar.',
     placeholderCover: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&q=80',
     placeholderGallery: [
