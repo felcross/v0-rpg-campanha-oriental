@@ -20,7 +20,7 @@ export const worldMapsData: WorldMapTab[] = [
     id: 'mundi',
     name: 'Mapa Mundi',
     folderPath: '/assets/mapas/mundi',
-    coverImage: 'mapa_capa.jpg',
+    coverImage: 'mapa_capa.png',
     gallery: ['mapa_1.jpg'],
     description: 'O vasto mundo conhecido se estende muito além das fronteiras de Nihongan. Explore continentes distantes, mares inexplorados e terras misteriosas onde civilizações antigas guardam segredos inimagináveis.',
     placeholderCover: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1200&q=80',
