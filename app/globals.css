@@ -4,75 +4,80 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Oriental Theme - Aged Parchment & Imperial Red */
-  --background: oklch(0.97 0.01 85);
-  --foreground: oklch(0.15 0.02 30);
-  --card: oklch(0.95 0.015 80);
-  --card-foreground: oklch(0.15 0.02 30);
-  --popover: oklch(0.97 0.01 85);
-  --popover-foreground: oklch(0.15 0.02 30);
-  --primary: oklch(0.35 0.15 25);
-  --primary-foreground: oklch(0.97 0.01 85);
-  --secondary: oklch(0.12 0.02 30);
-  --secondary-foreground: oklch(0.97 0.01 85);
-  --muted: oklch(0.90 0.02 80);
-  --muted-foreground: oklch(0.40 0.02 30);
-  --accent: oklch(0.70 0.12 85);
-  --accent-foreground: oklch(0.15 0.02 30);
-  --destructive: oklch(0.45 0.18 25);
-  --destructive-foreground: oklch(0.97 0.01 85);
-  --border: oklch(0.85 0.03 75);
-  --input: oklch(0.92 0.02 80);
-  --ring: oklch(0.35 0.15 25);
-  --chart-1: oklch(0.35 0.15 25);
-  --chart-2: oklch(0.70 0.12 85);
-  --chart-3: oklch(0.12 0.02 30);
-  --chart-4: oklch(0.65 0.08 350);
-  --chart-5: oklch(0.50 0.10 150);
-  --radius: 0.25rem;
-  --sidebar: oklch(0.95 0.015 80);
-  --sidebar-foreground: oklch(0.15 0.02 30);
-  --sidebar-primary: oklch(0.35 0.15 25);
-  --sidebar-primary-foreground: oklch(0.97 0.01 85);
-  --sidebar-accent: oklch(0.90 0.02 80);
-  --sidebar-accent-foreground: oklch(0.15 0.02 30);
-  --sidebar-border: oklch(0.85 0.03 75);
-  --sidebar-ring: oklch(0.35 0.15 25);
+  /* Feudal Japan Dark Theme - Deep Ink & Imperial Crimson */
+  --background: oklch(0.08 0.01 30);
+  --foreground: oklch(0.93 0.015 85);
+  --card: oklch(0.12 0.015 30);
+  --card-foreground: oklch(0.93 0.015 85);
+  --popover: oklch(0.10 0.01 30);
+  --popover-foreground: oklch(0.93 0.015 85);
+  --primary: oklch(0.50 0.20 25);
+  --primary-foreground: oklch(0.98 0.005 85);
+  --secondary: oklch(0.15 0.01 30);
+  --secondary-foreground: oklch(0.93 0.015 85);
+  --muted: oklch(0.18 0.01 30);
+  --muted-foreground: oklch(0.65 0.015 80);
+  --accent: oklch(0.65 0.12 85);
+  --accent-foreground: oklch(0.10 0.01 30);
+  --destructive: oklch(0.50 0.20 25);
+  --destructive-foreground: oklch(0.98 0.005 85);
+  --border: oklch(0.25 0.02 30);
+  --input: oklch(0.15 0.01 30);
+  --ring: oklch(0.50 0.20 25);
+  --chart-1: oklch(0.50 0.20 25);
+  --chart-2: oklch(0.65 0.12 85);
+  --chart-3: oklch(0.20 0.01 30);
+  --chart-4: oklch(0.55 0.15 350);
+  --chart-5: oklch(0.45 0.12 150);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.10 0.01 30);
+  --sidebar-foreground: oklch(0.93 0.015 85);
+  --sidebar-primary: oklch(0.50 0.20 25);
+  --sidebar-primary-foreground: oklch(0.98 0.005 85);
+  --sidebar-accent: oklch(0.18 0.01 30);
+  --sidebar-accent-foreground: oklch(0.93 0.015 85);
+  --sidebar-border: oklch(0.25 0.02 30);
+  --sidebar-ring: oklch(0.50 0.20 25);
+  
+  /* Custom Theme Colors */
+  --gold: oklch(0.75 0.15 85);
+  --parchment: oklch(0.95 0.02 85);
+  --ink: oklch(0.08 0.01 30);
 }
 
 .dark {
-  --background: oklch(0.12 0.02 30);
-  --foreground: oklch(0.95 0.015 80);
-  --card: oklch(0.15 0.02 30);
-  --card-foreground: oklch(0.95 0.015 80);
-  --popover: oklch(0.12 0.02 30);
-  --popover-foreground: oklch(0.95 0.015 80);
-  --primary: oklch(0.55 0.18 25);
-  --primary-foreground: oklch(0.97 0.01 85);
-  --secondary: oklch(0.25 0.02 30);
-  --secondary-foreground: oklch(0.95 0.015 80);
-  --muted: oklch(0.20 0.02 30);
-  --muted-foreground: oklch(0.65 0.02 80);
-  --accent: oklch(0.70 0.12 85);
-  --accent-foreground: oklch(0.12 0.02 30);
-  --destructive: oklch(0.45 0.18 25);
-  --destructive-foreground: oklch(0.97 0.01 85);
+  --background: oklch(0.08 0.01 30);
+  --foreground: oklch(0.93 0.015 85);
+  --card: oklch(0.12 0.015 30);
+  --card-foreground: oklch(0.93 0.015 85);
+  --popover: oklch(0.10 0.01 30);
+  --popover-foreground: oklch(0.93 0.015 85);
+  --primary: oklch(0.50 0.20 25);
+  --primary-foreground: oklch(0.98 0.005 85);
+  --secondary: oklch(0.15 0.01 30);
+  --secondary-foreground: oklch(0.93 0.015 85);
+  --muted: oklch(0.18 0.01 30);
+  --muted-foreground: oklch(0.65 0.015 80);
+  --accent: oklch(0.65 0.12 85);
+  --accent-foreground: oklch(0.10 0.01 30);
+  --destructive: oklch(0.50 0.20 25);
+  --destructive-foreground: oklch(0.98 0.005 85);
   --border: oklch(0.25 0.02 30);
-  --input: oklch(0.20 0.02 30);
-  --ring: oklch(0.55 0.18 25);
-  --chart-1: oklch(0.55 0.18 25);
-  --chart-2: oklch(0.70 0.12 85);
-  --chart-3: oklch(0.40 0.02 30);
-  --chart-4: oklch(0.65 0.08 350);
-  --chart-5: oklch(0.50 0.10 150);
-  --sidebar: oklch(0.15 0.02 30);
-  --sidebar-foreground: oklch(0.95 0.015 80);
-  --sidebar-primary: oklch(0.55 0.18 25);
-  --sidebar-primary-foreground: oklch(0.97 0.01 85);
-  --sidebar-accent: oklch(0.20 0.02 30);
-  --sidebar-accent-foreground: oklch(0.95 0.015 80);
+  --input: oklch(0.15 0.01 30);
+  --ring: oklch(0.50 0.20 25);
+  --chart-1: oklch(0.50 0.20 25);
+  --chart-2: oklch(0.65 0.12 85);
+  --chart-3: oklch(0.20 0.01 30);
+  --chart-4: oklch(0.55 0.15 350);
+  --chart-5: oklch(0.45 0.12 150);
+  --sidebar: oklch(0.10 0.01 30);
+  --sidebar-foreground: oklch(0.93 0.015 85);
+  --sidebar-primary: oklch(0.50 0.20 25);
+  --sidebar-primary-foreground: oklch(0.98 0.005 85);
+  --sidebar-accent: oklch(0.18 0.01 30);
+  --sidebar-accent-foreground: oklch(0.93 0.015 85);
   --sidebar-border: oklch(0.25 0.02 30);
-  --sidebar-ring: oklch(0.55 0.18 25);
+  --sidebar-ring: oklch(0.50 0.20 25);
 }
 
 @theme inline {
@@ -115,6 +120,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: var(--gold);
+  --color-parchment: var(--parchment);
+  --color-ink: var(--ink);
 }
 
 @layer base {
@@ -141,5 +149,23 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--destructive);
+  background: var(--accent);
+}
+
+/* Ink brush stroke animation */
+@keyframes brush-stroke {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.brush-stroke {
+  animation: brush-stroke 0.5s ease-out forwards;
+  transform-origin: left;
+}
+
+/* Parchment texture overlay */
+.parchment-bg {
+  background-image: 
+    linear-gradient(to bottom, rgba(244, 239, 230, 0.03) 0%, transparent 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
 }
