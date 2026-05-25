@@ -20,25 +20,21 @@ export const worldMapsData: WorldMapTab[] = [
     id: 'mundi',
     name: 'Mapa Mundi',
     folderPath: '/assets/mapas/mundi',
-    coverImage: 'mapa_capa.png',
-    gallery: ['mapa_1.jpg'],
+    coverImage: 'mapa_capa.jpg',
+    gallery: [],
     description: 'O vasto mundo conhecido se estende muito além das fronteiras de Nihongan. Explore continentes distantes, mares inexplorados e terras misteriosas onde civilizações antigas guardam segredos inimagináveis.',
     placeholderCover: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1200&q=80',
-    placeholderGallery: [
-      'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80'
-    ]
+    placeholderGallery: []
   },
   {
     id: 'geral_nihongan',
     name: 'Mapa Geral de Nihongan',
     folderPath: '/assets/mapas/geral_nihongan',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg'],
+    gallery: [],
     description: 'O glorioso Império de Nihongan em toda sua extensão. Das montanhas geladas do norte às ilhas tropicais do sul, este mapa revela as províncias, rotas comerciais e pontos estratégicos do maior império do mundo conhecido.',
     placeholderCover: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&q=80',
-    placeholderGallery: [
-      'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80'
-    ]
+    placeholderGallery: []
   }
 ]
 
@@ -63,7 +59,7 @@ export const regionsData: Region[] = [
     name: 'Região Norte (Terras Gélidas)',
     folderPath: '/assets/imperio/regiao_norte',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_6.jpg', 'mapa_7.jpg'],
     description: 'As terras do norte são dominadas por montanhas nevadas e florestas ancestrais. Aqui residem os clãs mais resilientes, forjados pelo frio implacável e pela constante vigilância contra as criaturas das terras além da Muralha de Gelo. Os invernos são longos e impiedosos, mas a beleza das auroras boreais e dos templos cobertos de neve compensam qualquer sacrifício.',
     placeholderCover: 'https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=1200&q=80',
     placeholderGallery: [
@@ -76,7 +72,7 @@ export const regionsData: Region[] = [
     name: 'Região Central (Planícies Imperiais)',
     folderPath: '/assets/imperio/regiao_central',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_6.jpg', 'mapa_7.jpg'],
     description: 'O coração pulsante do império, onde se ergue a majestosa Capital Imperial e os principais centros de poder político e espiritual. As planícies férteis alimentam todo o reino, e os rios sagrados conectam as províncias como veias de um corpo vivo. Aqui, a corte imperial tece intrigas tão complexas quanto os jardins de cerejeiras que adornam seus palácios.',
     placeholderCover: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1200&q=80',
     placeholderGallery: [
@@ -89,7 +85,7 @@ export const regionsData: Region[] = [
     name: 'Região Sul (Costa das Mil Ilhas)',
     folderPath: '/assets/imperio/regiao_sul',
     coverImage: 'mapa_capa.jpg',
-    gallery: ['mapa_1.jpg', 'mapa_2.jpg'],
+    gallery: ['mapa_1.jpg', 'mapa_2.jpg', 'mapa_3.jpg', 'mapa_4.jpg', 'mapa_5.jpg'],
     description: 'O arquipélago do sul é um mundo à parte, onde mil ilhas pontilham mares esmeraldinos. Rica em comércio e tradições marítimas, esta região é lar de pescadores intrépidos, mercadores astutos e piratas que desafiam a autoridade imperial. Os templos flutuantes e as aldeias sobre palafitas guardam segredos antigos dos povos do mar.',
     placeholderCover: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1200&q=80',
     placeholderGallery: [
